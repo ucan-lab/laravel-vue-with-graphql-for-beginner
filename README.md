@@ -29,16 +29,16 @@ $ docker-compose up -d
 ### Composer Install
 
 ```
-$ docker-compose exec app composer install
+$ docker-compose exec app ash -l
+$ composer install
+$ cp .env.example .env
+$ php artisan key:generate
+$ php artisan jwt:secret
+$ php artisan migrate
 ```
 
 http://127.0.0.1:4000
-
-### Running Migrations
-
-```
-$ docker-compose exec app php artisan migrate
-```
+http://127.0.0.1:4000/graphql-playground
 
 ## As necessary
 
