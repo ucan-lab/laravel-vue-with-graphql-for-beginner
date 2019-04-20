@@ -1,9 +1,8 @@
-# docker-laravel5
+# laravel-vue-graphql
 
 ## Description
 
-Build Laravel's development environment using docker.  
-PHP7.3/MySQL8.0/nginx/composer/redis/node
+「実践！Laravel+Vue.jsではじめるGraphQL入門」本を参考にしてます。
 
 ## Usage
 
@@ -16,8 +15,8 @@ $ git config --global core.autocrlf false
 ### Git clone
 
 ```
-$ git clone git@github.com:ucan-lab/docker-laravel5.git
-$ cd docker-laravel5
+$ git clone git@github.com:ucan-lab/laravel-vue-with-graphql-for-beginner
+$ cd laravel-vue-with-graphql-for-beginner
 ```
 
 ### Docker compose build & up
@@ -27,13 +26,13 @@ $ docker-compose build
 $ docker-compose up -d
 ```
 
-### Install Laravel 5 using Composer
+### Composer Install
 
 ```
-$ docker-compose exec app composer create-project --prefer-dist "laravel/laravel=5.8.*" .
+$ docker-compose exec app composer install
 ```
 
-http://127.0.0.1:3500
+http://127.0.0.1:4000
 
 ### Running Migrations
 
